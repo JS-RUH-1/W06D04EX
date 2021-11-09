@@ -9,12 +9,16 @@ function Nav() {
       <BrowserRouter>
         <Link to="/Welcome">Welcome </Link><br/><br/>
         <Link to="/User">User</Link><br/><br/>
+        <Link to="/Games">Games</Link><br/><br/>
          <Switch>
           <Route path="/Welcome">
             <Welcome />
           </Route>
           <Route path="/User">
             <Users />
+          </Route>
+          <Route path="/Games">
+            <Games />
           </Route> 
         </Switch>
       </BrowserRouter>
