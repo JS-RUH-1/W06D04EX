@@ -3,7 +3,6 @@ import axios from "axios";
 
 function Games() {
   const [games, setGames] = useState([]);
-  const [name, setName] = useState("");
 
   useEffect(() => {
     axios.get("/games/allGames").then((res) => {
@@ -15,7 +14,6 @@ function Games() {
   function addGame(e) {
     e.preventDefault();
     console.log(e.target.form[0].value)
-    setName(e.target.form[0].value)
     axios.post("/games/addGame",{ data: { name:e.target.form[0].value } }).then((res) => {
       console.log("what game do u have: ", res)
     });
