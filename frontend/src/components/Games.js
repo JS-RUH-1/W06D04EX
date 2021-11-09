@@ -10,7 +10,7 @@ function Games() {
       console.log(res.data);
       setGames(res.data);
     });
-  },[name]);
+  },[]);
 
   function addGame(e) {
     e.preventDefault();
