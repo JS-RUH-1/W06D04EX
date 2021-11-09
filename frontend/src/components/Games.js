@@ -16,6 +16,7 @@ function Games() {
     console.log(e.target.form[0].value)
     axios.post("/games/addGame",{ data: { name:e.target.form[0].value } }).then((res) => {
       console.log("what game do u have: ", res)
+      setGames(res.data);
     });
   }
 
